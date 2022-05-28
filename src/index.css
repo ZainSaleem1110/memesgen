@@ -51,3 +51,11 @@
 .gradient{
     background-image: linear-gradient(#F9FAFB, white);
 }
+
+.verticalScroll::-webkit-scrollbar {
+    visibility: hidden;
+  }
+
+.category{
+    border: 2px solid #3720C7 !important;
+  }
