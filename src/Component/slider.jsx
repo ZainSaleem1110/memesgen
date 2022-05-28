@@ -20,11 +20,11 @@ const sliderData = [
 
 function Slider() {
     return (
-        <Box className="flex my-10 pt-20">
-            <Box className="w-[35%] h-[220px] flex justify-end">
+        <Box className="flex my-10">
+            <Box className="w-[35%] h-[220px] flex justify-end pt-12">
                 <Box className="w-[75%] relative">
                     <img src={Trending} className="h-[180px]" alt="" />
-                    <Box className="absolute bottom-9 left-20">
+                    <Box className="absolute bottom-0 left-20">
                         <Typography variant="h5">
                             <span className="font-bold">
                                 Trending
@@ -39,7 +39,7 @@ function Slider() {
                     </Box>
                 </Box>
             </Box>
-            <Box className="w-[65%]">
+            <Box className="w-[65%]  pt-20">
                 <Box className="special-slider w-[100%] overflow-hidden relative h-[229px]">
                     <Box className="slids w-[200%] flex gap-x-10">
                         {sliderData && sliderData.map((list, index) => {
