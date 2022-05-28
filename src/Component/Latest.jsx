@@ -1,8 +1,8 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Pagination from './pagination'
 import Typography from '@mui/material/Typography';
+import PostingCard from './posting';
 
 const tabs = ["#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "More"]
 
@@ -22,6 +22,7 @@ function Latest() {
                 <Typography variant="p" className="pr-7">1 - 12 of 456</Typography>
                 <Pagination />
             </Box>
+            <PostingCard/>
         </Box>
     )
 }
