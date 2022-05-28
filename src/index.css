@@ -16,3 +16,38 @@
     background: url("./assest/banner.svg") no-repeat;
     background-size: 100% 100%;
 }
+
+.slid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    animation-name: slider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes slider {
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: -12%;
+    }
+    40%{
+        left: -24%;
+    }
+    60%{
+        left: -37%;
+    }
+    80%{
+        left:-50%;
+    }
+    100%{
+        left: -50%;
+    }
+    
+}
+
+.gradient{
+    background-image: linear-gradient(#F9FAFB, white);
+}

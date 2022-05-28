@@ -9,7 +9,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Navbar() {
     return (
-        <Card className="w-[100%] py-4 fixed top-0 left-0 drop-shadow-lg flex justify-center items-center">
+        <Card className="w-[100%] z-50 py-4 fixed top-0 left-0 drop-shadow-lg flex justify-center items-center">
             <Box className="flex items-center w-[85%]">
                 <img src={Logo} className="w-[190px]" alt="" />
                 <Box className="flex items-center w-[400px] h-[44px] rounded-full bg-[#F1F1F1] text-[#AFAFAF] px-4 ml-[12%]">
