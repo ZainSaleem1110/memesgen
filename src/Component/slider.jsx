@@ -43,8 +43,9 @@ function Slider() {
                 <Box className="special-slider w-[100%] overflow-hidden relative h-[229px]">
                     <Box className="slids w-[200%] flex gap-x-10">
                         {sliderData && sliderData.map((list, index) => {
-                            return <Box className="slid">
-                                <img src={list.Img} className="w-[265px] h-[229px]" alt="" />
+                            return <Box className="slid relative" key={index}>
+                                <img src={list.Img} className="w-[265px]" alt="" />
+                                <Box className="h-[40px] w-[100%] absolute bottom-0 left-0 text-white rounded-b-lg flex items-center pl-3" style={{background:"rgba(0,0,0,.6)"}}>{list.name}</Box>
                             </Box>
                         })}
                     </Box>
