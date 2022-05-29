@@ -105,7 +105,7 @@ function Posting() {
                         })}
                     </Masonry>
                 </div>
-                <div className="md:hidden flex">
+                <div className="md:hidden flex justify-center">
                     <Masonry columns={1} spacing={2} className="post">
                         {PostData && PostData.map((list, index) => {
                             return <Item key={index} sx={{ height: "auto", p: 0 }}>
