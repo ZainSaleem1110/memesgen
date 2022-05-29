@@ -10,7 +10,7 @@ const tabs = ["#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#bffs", "#b
 
 const Latest =()=> {
     return (
-        <Box>
+        <Box className="w-[100%]">
             <Box className="overflow-x-auto verticalScroll">
                 <Box className="h-[48px] w-[1100px] flex justify-between">
                     {tabs && tabs.map((buttonList:string, index) => {
@@ -20,8 +20,8 @@ const Latest =()=> {
                     })}
                 </Box>
             </Box>
-            <Box className="flex items-center justify-end mt-3">
-                <Typography className="pr-7">1 - 12 of 456</Typography>
+            <Box className="flex md:flex-row flex-col items-center justify-end mt-3 ">
+                <Typography className="pr-7 md:pb-0 pb-3"><span className="text-[gray]">1 - 12 of 456</span></Typography>
                 <Pagination />
             </Box>
             <PostingCard/>

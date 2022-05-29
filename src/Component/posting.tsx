@@ -28,9 +28,9 @@ const PostData = [
     { Img: Post01, name: "Me in my profile pic vs. me in the zoom meeting" },
     { Img: Post02, name: "Security" },
     { Img: Post03, name: "people in toothpaste commercials" },
-    { Img: Post04, name: "[Visible Confusion]"},
+    { Img: Post04, name: "[Visible Confusion]" },
     { Img: Post06, name: "*me falling for you*" },
-    { Img: Post05, name: "me and my emotions"}, 
+    { Img: Post05, name: "me and my emotions" },
     { Img: Post07, name: "Bill Nye the Science Fry" },
     { Img: Post08, name: "idk what to say so I’m sending this" },
     { Img: Post09, name: "Opening the oven to check on your food like" },
@@ -51,34 +51,91 @@ function Posting() {
     return (
         <Box className="mt-7">
             <Box sx={{ width: '100%' }}>
-                <Masonry columns={3} spacing={2}>
-                            {PostData && PostData.map((list, index) => {
-                                return <Item key={index} sx={{ height:"auto",p:0 }}>
-                                    <Card>
-                                        <Box className="h-[72px] flex items-center justify-between px-4">
-                                            <Box className="flex items-center">
-                                                <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
-                                                <Typography className="w-[190px] pl-3 text-left">{list.name}</Typography>
-                                            </Box>
-                                            <LinkIcon />
+            <div className="xl:flex hidden">
+                    <Masonry columns={3} spacing={2} className="post">
+                        {PostData && PostData.map((list, index) => {
+                            return <Item key={index} sx={{ height: "auto", p: 0 }}>
+                                <Card>
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Box className="flex items-center">
+                                            <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
+                                            <Typography className="w-[190px] pl-3 text-left">{list.name}</Typography>
                                         </Box>
-                                        <img src={list.Img} alt="" />
-                                        <Box className="h-[72px] flex items-center justify-between px-4">
-                                            <Stack spacing={2} direction="row">
-                                                <Button startIcon={<ThumbUpIcon />}>1.5k</Button>
-                                                <Button startIcon={<VisibilityIcon />}>
-                                                    1.5k
-                                                </Button>
-                                            </Stack>
-                                            <Button className="btn colorBtn">Remix</Button>
+                                        <LinkIcon />
+                                    </Box>
+                                    <img src={list.Img} className="w-[100%]" alt="" />
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Stack spacing={2} direction="row">
+                                            <Button startIcon={<ThumbUpIcon />}>1.5k</Button>
+                                            <Button startIcon={<VisibilityIcon />}>
+                                                1.5k
+                                            </Button>
+                                        </Stack>
+                                        <Button className="btn colorBtn">Remix</Button>
+                                    </Box>
+                                </Card>
+                            </Item>
+                        })}
+                    </Masonry>
+                </div>
+                <div className="md:flex xl:hidden hidden">
+                    <Masonry columns={2} spacing={2} className="post">
+                        {PostData && PostData.map((list, index) => {
+                            return <Item key={index} sx={{ height: "auto", p: 0 }}>
+                                <Card>
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Box className="flex items-center">
+                                            <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
+                                            <Typography className="w-[190px] pl-3 text-left">{list.name}</Typography>
                                         </Box>
-                                    </Card>
-                                </Item>
-                            })}
-                </Masonry>
+                                        <LinkIcon />
+                                    </Box>
+                                    <img src={list.Img} className="w-[100%]" alt="" />
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Stack spacing={2} direction="row">
+                                            <Button startIcon={<ThumbUpIcon />}>1.5k</Button>
+                                            <Button startIcon={<VisibilityIcon />}>
+                                                1.5k
+                                            </Button>
+                                        </Stack>
+                                        <Button className="btn colorBtn">Remix</Button>
+                                    </Box>
+                                </Card>
+                            </Item>
+                        })}
+                    </Masonry>
+                </div>
+                <div className="md:hidden flex">
+                    <Masonry columns={1} spacing={2} className="post">
+                        {PostData && PostData.map((list, index) => {
+                            return <Item key={index} sx={{ height: "auto", p: 0 }}>
+                                <Card className="">
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Box className="flex items-center">
+                                            <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
+                                            <Typography className="w-[190px] pl-3 text-left">{list.name}</Typography>
+                                        </Box>
+                                        <LinkIcon />
+                                    </Box>
+                                    <img src={list.Img} className="w-[100%]" alt="" />
+                                    <Box className="h-[72px] flex items-center justify-between px-4">
+                                        <Stack spacing={2} direction="row">
+                                            <Button startIcon={<ThumbUpIcon />}>1.5k</Button>
+                                            <Button startIcon={<VisibilityIcon />}>
+                                                1.5k
+                                            </Button>
+                                        </Stack>
+                                        <Button className="btn colorBtn">Remix</Button>
+                                    </Box>
+                                </Card>
+                            </Item>
+                        })}
+                    </Masonry>
+                </div>
+
             </Box>
-            <Box className="flex items-center justify-end mt-3 border-t pt-5">
-                <Typography className="pr-7">1 - 12 of 456</Typography>
+            <Box className="flex md:flex-row flex-col items-center justify-end mt-3 ">
+                <Typography className="pr-7 md:pb-0 pb-3"><span className="text-[gray]">1 - 12 of 456</span></Typography>
                 <Pagination />
             </Box>
         </Box>

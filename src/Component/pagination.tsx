@@ -11,7 +11,7 @@ export default function CustomIcons() {
       <Pagination
         count={25}
         renderItem={(item) => (
-          <PaginationItem
+          <PaginationItem className="pagination"
             components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
             {...item}
           />

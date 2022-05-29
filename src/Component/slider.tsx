@@ -20,9 +20,9 @@ const sliderData = [
 
 function Slider() {
     return (
-        <Box className="flex my-10">
-            <Box className="w-[35%] h-[220px] flex justify-end pt-12">
-                <Box className="w-[75%] relative">
+        <Box className="flex lg:flex-row flex-col lg:items-start items-center my-10 w-[100%] overflow-x-hidden">
+            <Box className="w-[400px] h-[180px] flex justify-end">
+                <Box className="lg:w-[75%] w-[100%] relative">
                     <img src={Trending} className="h-[180px]" alt="" />
                     <Box className="absolute bottom-0 left-20">
                         <Typography>
@@ -33,19 +33,19 @@ function Slider() {
                                 Tags
                             </span>
                         </Typography>
-                        <Typography sx={{ fontSize: 14,mt:1 }}>
+                        <Typography sx={{ fontSize: 14, mt: 1 }}>
                             The most viewed, most loved.
                         </Typography>
                     </Box>
                 </Box>
             </Box>
-            <Box className="w-[65%]  pt-20">
+            <Box className="lg:w-[700px] w-[100%] overflow-hidden pt-16">
                 <Box className="special-slider w-[100%] overflow-hidden relative h-[229px]">
-                    <Box className="slids w-[200%] flex gap-x-10">
+                    <Box className="slids w-[2120px] flex gap-x-10">
                         {sliderData && sliderData.map((list, index) => {
-                            return <Box className="slid relative" key={index}>
-                                <img src={list.Img} className="w-[265px]" alt="" />
-                                <Box className="h-[40px] w-[100%] absolute bottom-0 left-0 text-white rounded-b-lg flex items-center pl-3" style={{background:"rgba(0,0,0,.6)"}}>{list.name}</Box>
+                            return <Box className="slid relative w-[265px] h-[200px]" key={index}>
+                                <img src={list.Img} className="absolute top-0 left-0 z-30" alt="" />
+                                <Box className="h-[40px] w-[100%] absolute bottom-0 left-0 text-white rounded-b-lg flex items-center pl-3 z-40" style={{ background: "rgba(0,0,0,.6)" }}>{list.name}</Box>
                             </Box>
                         })}
                     </Box>

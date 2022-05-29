@@ -7,10 +7,10 @@ import Tabs from "./Tabs"
 
 function Post() {
     return (
-        <Box className="w-[80%] py-10 px-14 bg-white rounded-lg" style={{borderRadius:"20px !important"}}>
-            <Box className="flex justify-between items-center">
-                <Typography style={{fontWeight:"bold !important"}}>Recent & Notable</Typography>
-                <Box className="w-[384px] bg-[#2066C7] rounded-xl flex items-center px-2 pr-5 py-3 text-white">
+        <Box className="sm:w-[90%] w-[100%] py-10 md:px-14 sm:px-8 px-4 bg-white rounded-lg" style={{borderRadius:"20px !important"}}>
+            <Box className="flex md:flex-row flex-col justify-between items-center">
+                <Typography style={{fontWeight:"bold !important"}}><span className="text-[28px]">Recent & Notable</span></Typography>
+                <Box className="sm:w-[384px] md:mt-0 mt-5 bg-[#2066C7] rounded-xl flex items-center px-2 pr-5 py-3 text-white">
                     <img src={GiftBox} alt="" />
                     <Typography className="text-center ml-2">Find something you like? Use the base as a template to create your own meme!</Typography>
                 </Box>

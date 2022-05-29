@@ -48,7 +48,7 @@ export default function BasicTabs() {
 
     return (
         <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '40%' }}>
+            <Box className="lg:w-[40%] md:w-[70%] w-[100%] lg:mt-0 mt-5" sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     <Tab label="The Latest" {...a11yProps(0)} />
                     <Tab label="Most Liked" {...a11yProps(1)} />

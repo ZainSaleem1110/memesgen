@@ -12,16 +12,7 @@
     border-radius: 20px !important;
 }
 
-.banner{
-    background: url("./assest/banner.svg") no-repeat;
-    background-size: 100% 100%;
-}
-
 .slid{
-    position: relative;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
     animation-name: slider;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -69,4 +60,9 @@
   .outlineBtn{
       color: 5099E3 !important;
       border: 2px solid #5099E3 !important;
+  }
+
+  .pagination{
+      color:#2066C7 !important ;
+      font-weight: bold !important;
   }
