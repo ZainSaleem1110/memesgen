@@ -20,7 +20,7 @@ const sliderData = [
 
 function Slider() {
     return (
-        <Box className="flex lg:flex-row flex-col lg:items-start items-center my-10 w-[100%] overflow-x-hidden">
+        <Box className="flex lg:flex-row flex-col lg:items-start items-center md:my-10 my-5 w-[100%] overflow-x-hidden">
             <Box className="w-[400px] h-[180px] flex justify-end">
                 <Box className="lg:w-[75%] w-[100%] relative">
                     <img src={Trending} className="h-[180px]" alt="" />
