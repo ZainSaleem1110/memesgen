@@ -19,48 +19,68 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Masonry from '@mui/lab/Masonry';
+import Pagination from './pagination'
+
+const PostData = [
+    { Img: Post01, name: "Me in my profile pic vs. me in the zoom meeting" },
+    { Img: Post02, name: "Security" },
+    { Img: Post03, name: "people in toothpaste commercials" },
+    { Img: Post04, name: "[Visible Confusion]"},
+    { Img: Post06, name: "*me falling for you*" },
+    { Img: Post05, name: "me and my emotions"}, 
+    { Img: Post07, name: "Bill Nye the Science Fry" },
+    { Img: Post08, name: "idk what to say so I’m sending this" },
+    { Img: Post09, name: "Opening the oven to check on your food like" },
+    { Img: Post10, name: "when you click on reload just as the website loaded " },
+    { Img: Post11, name: "how to slap someone through the internet" },
+    { Img: Post12, name: "Barbie Movie animals be like" },
+]
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(0.5),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
 
 function Posting() {
     return (
-        <Box className="flex flex-wrap mt-7 gap-6">
-            <Card className="w-[360px] h-[528px]">
-                <Box className="h-[72px] flex items-center justify-between px-4">
-                    <Box className="flex items-center">
-                        <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
-                        <Typography variant="p" className="w-[70%] pl-3">Me in my profile pic vs. me in the zoom meeting</Typography>
-                    </Box>
-                    <LinkIcon />
-                </Box>
-                <img src={Post01} alt="" />
-                <Box className="h-[72px] flex items-center justify-between px-4">
-                    <Stack spacing={2} direction="row">
-                        <Button variant="outlined" startIcon={<ThumbUpIcon/>}>1.5k</Button>
-                        <Button startIcon={<VisibilityIcon/>}>
-                            1.5k
-                        </Button>
-                    </Stack>
-                    <Button variant="contained" className="btn">Remix</Button>
-                </Box>
-            </Card>
-            <Card className="w-[360px] h-[639px]">
-                <Box className="h-[72px] flex items-center justify-between px-4">
-                    <Box className="flex items-center">
-                        <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
-                        <Typography variant="p" className="w-[70%] pl-3">Me in my profile pic vs. me in the zoom meeting</Typography>
-                    </Box>
-                    <LinkIcon />
-                </Box>
-                <img src={Post02} alt="" />
-                <Box className="h-[72px] flex items-center justify-between px-4">
-                    <Stack spacing={2} direction="row">
-                        <Button variant="outlined" startIcon={<ThumbUpIcon/>}>1.5k</Button>
-                        <Button startIcon={<VisibilityIcon/>}>
-                            1.5k
-                        </Button>
-                    </Stack>
-                    <Button variant="contained" className="btn">Remix</Button>
-                </Box>
-            </Card>
+        <Box className="mt-7">
+            <Box sx={{ width: '100%' }}>
+                <Masonry columns={3} spacing={2}>
+                            {PostData && PostData.map((list, index) => {
+                                return <Item key={index} sx={{ height:"auto",p:0 }}>
+                                    <Card>
+                                        <Box className="h-[72px] flex items-center justify-between px-4">
+                                            <Box className="flex items-center">
+                                                <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
+                                                <Typography variant="p" className="w-[190px] pl-3 text-left">{list.name}</Typography>
+                                            </Box>
+                                            <LinkIcon />
+                                        </Box>
+                                        <img src={list.Img} alt="" />
+                                        <Box className="h-[72px] flex items-center justify-between px-4">
+                                            <Stack spacing={2} direction="row">
+                                                <Button variant="outlined" startIcon={<ThumbUpIcon />}>1.5k</Button>
+                                                <Button startIcon={<VisibilityIcon />}>
+                                                    1.5k
+                                                </Button>
+                                            </Stack>
+                                            <Button variant="contained" className="btn">Remix</Button>
+                                        </Box>
+                                    </Card>
+                                </Item>
+                            })}
+                </Masonry>
+            </Box>
+            <Box className="flex items-center justify-end mt-3 border-t pt-5">
+                <Typography variant="p" className="pr-7">1 - 12 of 456</Typography>
+                <Pagination />
+            </Box>
         </Box>
     )
 }

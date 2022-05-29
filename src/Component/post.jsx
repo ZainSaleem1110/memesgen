@@ -7,7 +7,7 @@ import Tabs from "./Tabs"
 
 function Post() {
     return (
-        <Card className="h-[2513px] w-[80%] py-10 px-14" style={{borderRadius:"20px !important"}}>
+        <Box className="w-[80%] py-10 px-14 bg-white rounded-lg" style={{borderRadius:"20px !important"}}>
             <Box className="flex justify-between items-center">
                 <Typography variant="h4" style={{fontWeight:"bold !important"}}>Recent & Notable</Typography>
                 <Box className="w-[384px] bg-[#2066C7] rounded-xl flex items-center px-2 pr-5 py-3 text-white">
@@ -16,7 +16,7 @@ function Post() {
                 </Box>
             </Box>
             <Tabs/>
-        </Card>
+        </Box>
     )
 }
 
