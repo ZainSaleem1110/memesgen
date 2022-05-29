@@ -11,9 +11,9 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 function Navbar() {
     return (
         <Card className="w-[100%] z-50 py-4 relative drop-shadow-lg flex justify-center items-center">
-            <Box className="flex md:flex-row flex-col items-center md:justify-between justify-center lg:px-10 px-5 w-[40%] lg:w-[80%] md:w-[90%]">
+            <Box className="flex md:flex-row flex-col items-center md:justify-between justify-center lg:px-10 px-5 xl:w-[60%] lg:w-[80%] w-[90%]">
                 <img src={Logo} className="w-[190px]" alt="" />
-                    <Box className="flex items-center md:w-[400px] h-[44px] rounded-full bg-[#F1F1F1] text-[#AFAFAF] px-4 md:ml-[12%] mx-[1%] md:mt-0 mt-5">
+                    <Box className="flex items-center h-[44px] rounded-full bg-[#F1F1F1] text-[#AFAFAF] px-4 md:ml-[5%] md:mt-0 mt-5">
                         <SearchIcon />
                         <input type="text" name="search" id="" className="bg-[transparent] focus:outline-none w-[100%] ml-3" placeholder="Search" />
                     </Box>
