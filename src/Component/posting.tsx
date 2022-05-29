@@ -58,19 +58,19 @@ function Posting() {
                                         <Box className="h-[72px] flex items-center justify-between px-4">
                                             <Box className="flex items-center">
                                                 <Box className="w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-[#6750A4]">A</Box>
-                                                <Typography variant="p" className="w-[190px] pl-3 text-left">{list.name}</Typography>
+                                                <Typography className="w-[190px] pl-3 text-left">{list.name}</Typography>
                                             </Box>
                                             <LinkIcon />
                                         </Box>
                                         <img src={list.Img} alt="" />
                                         <Box className="h-[72px] flex items-center justify-between px-4">
                                             <Stack spacing={2} direction="row">
-                                                <Button variant="outlined" startIcon={<ThumbUpIcon />}>1.5k</Button>
+                                                <Button startIcon={<ThumbUpIcon />}>1.5k</Button>
                                                 <Button startIcon={<VisibilityIcon />}>
                                                     1.5k
                                                 </Button>
                                             </Stack>
-                                            <Button variant="contained" className="btn">Remix</Button>
+                                            <Button className="btn colorBtn">Remix</Button>
                                         </Box>
                                     </Card>
                                 </Item>
@@ -78,7 +78,7 @@ function Posting() {
                 </Masonry>
             </Box>
             <Box className="flex items-center justify-end mt-3 border-t pt-5">
-                <Typography variant="p" className="pr-7">1 - 12 of 456</Typography>
+                <Typography className="pr-7">1 - 12 of 456</Typography>
                 <Pagination />
             </Box>
         </Box>

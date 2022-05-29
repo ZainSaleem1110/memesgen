@@ -6,16 +6,16 @@ import Button from '@mui/material/Button';
 
 export default function BannerCard() {
     return (
-        <Box className="w-[100%] h-[530px] mt-20 banner flex justify-center items-center">
+        <Box className="w-[100%] h-[530px] lg:mt-20 banner flex justify-center items-center">
             <Box className="w-[400px] mt-14 flex flex-col items-center">
-                    <Typography variant="h3" className="text-center">
-                        Make the next <span className="text-[#2066C7]">viral</span> meme.
+                    <Typography className="text-center">
+                        <span className="text-[56px] leading-tight">Make the next <span className="text-[#2066C7]">viral</span> meme.</span>
                     </Typography>
-                    <Typography variant="h6" sx={{mt:1}}>
+                    <Typography sx={{mt:1}}>
                         one does simply make cool memes.
                     </Typography>
                 <CardActions className="mt-4">
-                    <Button variant="contained" className="btn">Start Making Memes</Button>
+                    <Button className="btn colorBtn">Start Making Memes</Button>
                 </CardActions>
             </Box>
         </Box>

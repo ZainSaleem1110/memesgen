@@ -25,7 +25,7 @@ function Slider() {
                 <Box className="w-[75%] relative">
                     <img src={Trending} className="h-[180px]" alt="" />
                     <Box className="absolute bottom-0 left-20">
-                        <Typography variant="h5">
+                        <Typography>
                             <span className="font-bold">
                                 Trending
                             </span>
@@ -33,7 +33,7 @@ function Slider() {
                                 Tags
                             </span>
                         </Typography>
-                        <Typography variant="h6" sx={{ fontSize: 14,mt:1 }}>
+                        <Typography sx={{ fontSize: 14,mt:1 }}>
                             The most viewed, most loved.
                         </Typography>
                     </Box>

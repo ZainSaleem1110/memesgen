@@ -6,11 +6,11 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Latest from './Latest'
 
-function TabPanel(props) {
+function TabPanel(props:any) {
     const { children, value, index, ...other } = props;
 
     return (
-        <div
+        <Box
             role="tabpanel"
             hidden={value !== index}
             id={`simple-tabpanel-${index}`}
@@ -22,7 +22,7 @@ function TabPanel(props) {
                     <Typography>{children}</Typography>
                 </Box>
             )}
-        </div>
+        </Box>
     );
 }
 
@@ -32,7 +32,7 @@ TabPanel.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
+function a11yProps(index:any) {
     return {
         id: `simple-tab-${index}`,
         'aria-controls': `simple-tabpanel-${index}`,
@@ -42,7 +42,7 @@ function a11yProps(index) {
 export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event:any, newValue:any) => {
         setValue(newValue);
     };
 
