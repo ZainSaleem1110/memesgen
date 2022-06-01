@@ -7,6 +7,10 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
 
 .btn{
     border-radius: 20px !important;
@@ -76,17 +80,14 @@
     0%{
         left: 0%;
     }
-    25%{
+    35%{
+        left: -1%;
+    }
+    70%{
         left: -2%;
     }
-    50%{
-        left: -4%;
-    }
-    75%{
-        left: -6%;
-    }
     100%{
-        left: -6%;
+        left: -2%;
     }
     
 }

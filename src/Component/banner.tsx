@@ -8,11 +8,11 @@ import BannerMobImg from '../assest/bannerMobImg.svg'
 
 export default function BannerCard() {
     return (
-        <Box className="w-[100%] md:h-[80vh] sm:h-[60vh] h-[30vh] relative flex justify-center items-center md:mt-0 mt-5 relative">
+        <Box className="w-[100%] lg:h-[120vh] md:h-[100vh] h-[60vh] relative flex justify-center items-center md:mt-0 mt-5 relative">
             <Box className="">
-                <img src={BannerImg} alt="" className="md:flex hidden" />
-                <img src={BannerMobImg} alt="" className="md:hidden flex" />
-                <Box className="w-[100%] mt-14 flex flex-col items-center absolute xl:top-[200px] lg:top-[100px] md:top-[90px] sm:top-[40px] top-[-35px] left-0">
+                <img src={BannerImg} alt="" className="md:flex hidden w-[100%] h-[100%] absolute top-0 left-0" />
+                <img src={BannerMobImg} alt="" className="md:hidden flex absolute top-0 left-0" />
+                <Box className="sm:w-[590px] md:pt-6 flex flex-col items-center z-50">
                     <Typography className="text-center">
                         <span className="lg:text-[56px] md:text-[32px] text-[14px] leading-tight text-[black] md:font-normal font-bold">Make the next <br /> <span className="text-[#2066C7]">viral</span> meme.</span>
                     </Typography>
