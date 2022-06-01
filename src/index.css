@@ -66,3 +66,27 @@
       color:#2066C7 !important ;
       font-weight: bold !important;
   }
+
+  .slidLarge{
+    animation-name: sliderLarge;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes sliderLarge {
+    0%{
+        left: 0%;
+    }
+    25%{
+        left: -2%;
+    }
+    50%{
+        left: -4%;
+    }
+    75%{
+        left: -6%;
+    }
+    100%{
+        left: -6%;
+    }
+    
+}
