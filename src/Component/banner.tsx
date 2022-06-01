@@ -8,9 +8,9 @@ import BannerMobImg from '../assest/bannerMobImg.svg'
 
 export default function BannerCard() {
     return (
-        <Box className="w-[100%] lg:h-[120vh] md:h-[100vh] h-[60vh] relative flex justify-center items-center md:mt-0 mt-5 relative">
+        <Box className="w-[100%] lg:h-[85vh] md:h-[100vh] sm:h-[60vh] h-[40vh] relative flex justify-center items-center md:mt-0 mt-5 relative">
             <Box className="">
-                <img src={BannerImg} alt="" className="md:flex hidden w-[100%] h-[100%] absolute top-0 left-0" />
+                <img src={BannerImg} alt="" className="md:flex hidden w-[100%] h-[100%] absolute top-0 left-0 object-cover" />
                 <img src={BannerMobImg} alt="" className="md:hidden flex absolute top-0 left-0" />
                 <Box className="sm:w-[590px] md:pt-6 flex flex-col items-center z-50">
                     <Typography className="text-center">
