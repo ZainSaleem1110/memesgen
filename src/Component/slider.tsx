@@ -38,11 +38,11 @@ const LargestScreen = [
 
 function Slider() {
     return (
-        <Box className="flex lg:flex-row flex-col lg:items-start items-center md:my-10 my-5 w-[100%] overflow-x-hidden">
-            <Box className="xl:w-[1000px] lg:w-[400px] h-[180px] flex justify-end">
+        <Box className="flex lg:flex-row flex-col lg:items-start items-center lg:my-10 my-5 w-[100%] overflow-x-hidden h-auto">
+            <Box className="xl:w-[1000px] lg:w-[400px] flex">
                 <Box className="lg:w-[75%] w-[100%] relative">
-                    <img src={Trending} className="lg:h-[180px] xl:h-[250px]" alt="" />
-                    <Box className="absolute lg:bottom-0 xl:bottom-[-30%] left-20">
+                    <img src={Trending} className="h-[180px] xl:h-[250px]" alt="" />
+                    <Box className="pl-10 mt-[-40px]">
                         <Typography>
                             <span className="font-bold xl:text-[32px] lg:text-[18px]">
                                 Trending
@@ -57,11 +57,11 @@ function Slider() {
                     </Box>
                 </Box>
             </Box>
-            <Box className="xl:w-[1000px] lg:w-[950px] w-[100%] overflow-hidden pt-16">
+            <Box className="xl:w-[1000px] lg:w-[950px] w-[100%] overflow-x-hidden pt-16">
                 <Box className="special-slider w-[100%] overflow-hidden relative h-[229px]">
                     <Box className="slids w-[2120px] flex gap-x-10 xl:hidden">
                         {sliderData && sliderData.map((list, index) => {
-                            return <Box className="slid relative w-[265px] h-[200px]" key={index}>
+                            return <Box className="slid relative w-[265px]" key={index}>
                                 <img src={list.Img} className="absolute top-0 left-0 z-30" alt="" />
                                 <Box className="h-[40px] w-[100%] absolute bottom-0 left-0 text-white rounded-b-lg flex items-center pl-3 z-40" style={{ background: "rgba(0,0,0,.6)" }}>{list.name}</Box>
                             </Box>
@@ -69,7 +69,7 @@ function Slider() {
                     </Box>
                     <Box className="slidsLarge w-[3000px] hidden gap-x-10 xl:flex">
                         {LargestScreen && LargestScreen.map((list, index) => {
-                            return <Box className="slid relative w-[265px] h-[200px]" key={index}>
+                            return <Box className="slid relative w-[265px]" key={index}>
                                 <img src={list.Img} className="absolute h-[200px] w-[265px] top-0 left-0 z-30" alt="" />
                                 <Box className="h-[40px] w-[100%] absolute bottom-0 left-0 text-white rounded-b-lg flex items-center pl-3 z-40" style={{ background: "rgba(0,0,0,.6)" }}>{list.name}</Box>
                             </Box>

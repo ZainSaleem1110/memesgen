@@ -12,9 +12,9 @@ export default function BannerCard() {
             <Box className="">
                 <img src={BannerImg} alt="" className="md:flex hidden" />
                 <img src={BannerMobImg} alt="" className="md:hidden flex" />
-                <Box className="w-[100%] mt-14 flex flex-col items-center absolute xl:top-[200px] lg:top-[100px] md:top-[90px] sm:top-[40px] top-[-50px] left-0">
+                <Box className="w-[100%] mt-14 flex flex-col items-center absolute xl:top-[200px] lg:top-[100px] md:top-[90px] sm:top-[40px] top-[-35px] left-0">
                     <Typography className="text-center">
-                        <span className="lg:text-[56px] md:text-[32px] text-[16px] leading-tight text-[black] md:font-normal font-bold">Make the next <br /> <span className="text-[#2066C7]">viral</span> meme.</span>
+                        <span className="lg:text-[56px] md:text-[32px] text-[14px] leading-tight text-[black] md:font-normal font-bold">Make the next <br /> <span className="text-[#2066C7]">viral</span> meme.</span>
                     </Typography>
                     <Typography sx={{ mt: 1 }}>
                         one does simply make cool memes.
