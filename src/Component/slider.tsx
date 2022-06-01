@@ -39,7 +39,7 @@ function Slider() {
                     </Box>
                 </Box>
             </Box>
-            <Box className="lg:w-[950px] w-[100%] overflow-hidden pt-16">
+            <Box className="xl:w-[1500px] lg:w-[950px] w-[100%] overflow-hidden pt-16">
                 <Box className="special-slider w-[100%] overflow-hidden relative h-[229px]">
                     <Box className="slids w-[2120px] flex gap-x-10">
                         {sliderData && sliderData.map((list, index) => {
