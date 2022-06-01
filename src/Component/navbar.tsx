@@ -6,7 +6,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 function Navbar() {
     return (
@@ -25,7 +24,7 @@ function Navbar() {
                     </Stack>
             </Box>
         </Card>
-    )
+            )
 }
 
-export default Navbar
+            export default Navbar
